@@ -59,7 +59,7 @@ class MasterMind {
     console.log(Code.random(length));
     this.secretCode = Code.random(length);
     // this.secretCode.pegs = ['B', 'B', 'B', 'B'];
-    console.log('Secret code', { secret: this.secretCode.pegs });
+    console.log('Secret code', this.secretCode.pegs);
     this.startGame();
   }
 
