@@ -25,6 +25,10 @@ class Code {
     }
     return pegs;
   }
+
+  static fromString(str) {
+    return new Code(str.split(''));
+  }
 }
 
 let code = new Code(['R', 'G', 'R', 'B']);
@@ -38,3 +42,4 @@ console.log(JSON.stringify(code2));
 console.log(Code.random(5));
 console.log(Code.random(5));
 console.log(Code.random(5));
+console.log(Code.fromString('GBGB'));
