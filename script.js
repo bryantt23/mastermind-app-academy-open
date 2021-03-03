@@ -47,6 +47,10 @@ class Code {
     }
     return nearMatches;
   }
+
+  exactMatches(code) {
+    return JSON.stringify(code.pegs) === JSON.stringify(this.pegs);
+  }
 }
 /*
 let code = new Code(['R', 'G', 'R', 'B']);
@@ -69,7 +73,10 @@ console.log(code.numExactMatches(new Code(['Y', 'Y', 'Y', 'B'])));
 console.log(code.numExactMatches(new Code(['Y', 'Y', 'Y', 'Y'])));
 
 console.log(code.numNearMatches(new Code(['B', 'R', 'Y', 'Y'])));
-
 console.log(code.numNearMatches(new Code(['R', 'G', 'R', 'B'])));
-
 console.log(code.numNearMatches(new Code(['R', 'R', 'R', 'R'])));
+
+console.log(code.exactMatches(new Code(['R', 'G', 'R', 'B'])));
+console.log(code.exactMatches(new Code(['R', 'G', 'Y', 'Y'])));
+console.log(code.exactMatches(new Code(['B', 'R', 'Y', 'Y'])));
+console.log(code.exactMatches(new Code(['R', 'G', 'R', 'B', 'B'])));
